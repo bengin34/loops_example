@@ -2,15 +2,17 @@ let trial = 5;
 let rand = Math.round(Math.random() * 100);
 console.log(rand);
 do {
-  guess = Number(prompt(`Enter your guess:`));
+  guess = Number(
+    prompt(`Try to find my number.Enter your guess between 0-100:`)
+  );
   trial--;
   if (guess == rand) {
-    console.log(`Congrats,you win`);
+    alert(`Congrats,you win`);
   } else if (trial <= 0) {
-    console.log(`Sorry you lost.`);
+    alert(`Sorry you lost.`);
   } else if (guess > rand) {
-    console.log(`Decrease your number`);
+    alert(`Decrease your number`);
   } else {
-    console.log(`Increase your number`);
+    alert(`Increase your number`);
   }
 } while (trial > 0);
